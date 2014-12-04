@@ -1,0 +1,23 @@
+
+
+/* Liste des couleurs : http://fr.wikipedia.org/wiki/Liste_de_couleurs */
+
+body
+{
+	/*background:url(../images/background.jpg) no-repeat center top;
+	background-color: #FCFCFC;
+	background-position: fixed;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0px auto auto auto;*/
+}
+
+p
+{
+   width:400px;
+   height:100px;
+   text-align:center;
+   background:#FCDC12;
+   border-radius:5px;
+}
+
