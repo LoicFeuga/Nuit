@@ -12,14 +12,7 @@ body
 	margin:0px auto auto auto;*/
 }
 
-p
-{
-   width:400px;
-   height:100px;
-   text-align:center;
-   background:#FCDC12;
-   border-radius:5px;
-}
+
 
 .center{
 
@@ -30,4 +23,6 @@ p
 .header_multi{
 	display: none;
 }
+
+
 
