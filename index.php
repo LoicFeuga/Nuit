@@ -9,21 +9,4 @@
 
 
 
-
-  </div>
-
-  
-
-</div>
-
-</div>
-
-    <div class="container f_header margin-top-30">
-    <div class="row">
-        <div class="col-lg-12">
-            bbb
-        </div>
-    </div>
-    </div>
-
 <?php include "php/footer.php"; ?>
