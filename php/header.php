@@ -50,9 +50,9 @@
         <div class="col-lg-2"><a href="./index.php" id="go_to_accueil">Accueil</a></div>
         <div class="col-lg-2"><a href="./mafamille.php" id="go_to_famille">Ma famille</a></div>
         <div class="col-lg-2"><a href="./lescamps.php" id="go_to_camp">Les camps</a></div>
-        <div class="col-lg-2"><a href="" id="go_to_benevole">Devenir bénévoles</a></div>
-        <div class="col-lg-2"><a href="" id="go_to_mission">Missions</a></div>
-        <div class="col-lg-2"><a href="" id="go_to_contact">Contact</a></div>
+        <div class="col-lg-2"><a href="./benevole.php" id="go_to_benevole">Devenir bénévoles</a></div>
+        <div class="col-lg-2"><a href="./mission.php" id="go_to_mission">Missions</a></div>
+        <div class="col-lg-2"><a href="./contact.php" id="go_to_contact">Contact</a></div>
       </div>
     </div>
 
