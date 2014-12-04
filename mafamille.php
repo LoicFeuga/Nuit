@@ -20,7 +20,7 @@
     <div id="tooplate_content">
 
             
-      C'est l'accueil
+      C'est la famille
             
             
     </div>

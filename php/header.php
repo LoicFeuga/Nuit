@@ -10,6 +10,7 @@ Template 2033 Business
 http://www.tooplate.com/view/2033-business
 -->
 <link href="tooplate_style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/index.css" />
 </head>
 
 <body> 
@@ -37,7 +38,7 @@ http://www.tooplate.com/view/2033-business
                 <li><a href="benevole.php" class="">Bénévoles</a></li>
                 <li><a href="mission.php" class="">Mission</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="contact.php">Inscription</a></li>
+                <li><a href="inscription.php">Inscription</a></li>
                 <li><a href="contact.php">Connexion</a></li>
             </ul>     
         
