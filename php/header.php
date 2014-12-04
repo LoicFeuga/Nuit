@@ -1,59 +1,47 @@
-<!DOCTYPE html>
-
-<html lang="fr">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="charset=UTF8">
-    <title>Générateur HTML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Information Humanitaires</title> 
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--
+Template 2033 Business
+http://www.tooplate.com/view/2033-business
+-->
+<link href="tooplate_style.css" rel="stylesheet" type="text/css" />
 
-    <!-- Inclusion des pages de styles -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    
-    <!-- Inclusion de BootStrap -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
+<body> 
 
-<body>
-
-   <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a href="../" class="navbar-brand">Logo</a>
-    </div>
-   <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="" class="center">Information Humanitaire</a>
-        </li>
+<div id="tooplate_header_wrapper">
 
 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="" onclick="">Inscription</a></li>
-        <li><a href="" onclick="">Connexion</a></li>
-      </ul>
-    </nav>
-</div>
-</header>
-
-<div class="container">
-<div class="row">
-  <div class="col-lg-12">
-    <div class="row">
-      <div class="col-lg-12"> 
-        <div class="col-lg-2"><a href="./index.php" id="go_to_accueil">Accueil</a></div>
-        <div class="col-lg-2"><a href="./mafamille.php" id="go_to_famille">Ma famille</a></div>
-        <div class="col-lg-2"><a href="./lescamps.php" id="go_to_camp">Les camps</a></div>
-        <div class="col-lg-2"><a href="./benevole.php" id="go_to_benevole">Devenir bénévoles</a></div>
-        <div class="col-lg-2"><a href="./mission.php" id="go_to_mission">Missions</a></div>
-        <div class="col-lg-2"><a href="./contact.php" id="go_to_contact">Contact</a></div>
-      </div>
-    </div>
-
-   
+    <div id="tooplate_header">
+    
+        <div id="site_title">
+        
+        
+        </div> <!-- end of site_title -->
+        
+        
+        
+        <div class="cleaner_h10"></div>
+        
+        <div id="tooplate_menu">
+                
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">Ma famille</a></li>
+                <li><a href="services.html">Les Camps</a></li>
+                <li><a href="solutions.html" class="current">Bénévoles</a></li>
+                <li><a href="solutions.html" class="">Mission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Inscription</a></li>
+                <li><a href="contact.html">Déconnexion</a></li>
+            </ul>     
+        
+        </div> <!-- end of tooplate_menu -->
+        
+    </div>    
+</div> <!-- end of header_wrapper -->
