@@ -1,18 +1,29 @@
 <?php include "php/header.php"; ?>
 
   
-    <div class="row" id="header_famille" class=""> 
-      <div class="col-lg-12">
-        C'est ma famille  
-      </div>
+<div id="tooplate_middle_wrapper1">
+  <div id="tooplate_middle_wrapper2">
+    <div id="tooplate_middle">
+
+
+      
+      <p>Famille</p>
+      
+
+      
     </div>
-
-
   </div>
-
-  
-
 </div>
 
+<div id="tooplate_main">
+    
+    <div id="tooplate_content">
+
+            
+      C'est l'accueil
+            
+            
+    </div>
+    
 </div>
 <?php include "php/footer.php"; ?>

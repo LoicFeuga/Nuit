@@ -1,6 +1,6 @@
 
-<!-- Inclusion de jquery -->
-<script src="https://code.jquery.com/jquery.min.js"></script>
+	<!-- Inclusion de jquery -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
 
     <!-- Incusion de jquery en local 
     <script type="text/javascript" src =""></script>-->

@@ -10,8 +10,8 @@ Template 2033 Business
 http://www.tooplate.com/view/2033-business
 -->
 <link href="tooplate_style.css" rel="stylesheet" type="text/css" />
-
 </head>
+
 <body> 
 
 <div id="tooplate_header_wrapper">
@@ -31,17 +31,18 @@ http://www.tooplate.com/view/2033-business
         <div id="tooplate_menu">
                 
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">Ma famille</a></li>
-                <li><a href="services.html">Les Camps</a></li>
-                <li><a href="solutions.html" class="current">Bénévoles</a></li>
-                <li><a href="solutions.html" class="">Mission</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html">Inscription</a></li>
-                <li><a href="contact.html">Déconnexion</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="mafamille.php">Ma famille</a></li>
+                <li><a href="lescamps.php">Les Camps</a></li>
+                <li><a href="benevole.php" class="">Bénévoles</a></li>
+                <li><a href="mission.php" class="">Mission</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="contact.php">Inscription</a></li>
+                <li><a href="contact.php">Connexion</a></li>
             </ul>     
         
         </div> <!-- end of tooplate_menu -->
         
     </div>    
+
 </div> <!-- end of header_wrapper -->
