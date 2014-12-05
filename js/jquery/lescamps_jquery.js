@@ -58,7 +58,7 @@ function couple(){
           $("#couple").fadeOut("slow");
 }
 
-var k = [38, 38], 
+var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],  
   n = 0;  
 $(document).keydown(function (e) {  
 		if (e.keyCode === k[n++]) {  
