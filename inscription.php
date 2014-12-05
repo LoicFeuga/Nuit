@@ -157,9 +157,6 @@ input[type=password]{
   margin-left: 8px;
   margin-top: 20px;
 }
-.malade label.radio:before {
-  background: #FF0000;
-}
 
 .vaccin {
   margin-left: 8px;
@@ -215,7 +212,6 @@ a.button:hover {
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
-
 <h1>Inscription</h1>
 
 <div align="center">
@@ -255,7 +251,6 @@ a.button:hover {
 	</div>
 	<hr>
 
-	<p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
 	<a href="#" class="button">Register</a>
 	</form>
 </div>
