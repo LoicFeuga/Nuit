@@ -7,7 +7,8 @@
 
 
       
-      <p>Famille</p>
+      <p>Cette section gère la recherche des membre d'une famille</br></br>
+      Inserer votre clé pour obtenir la position des membres de votre famille, s'ils ont été enregistrés</p>
       
 
       
