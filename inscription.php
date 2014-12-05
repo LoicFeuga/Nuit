@@ -218,16 +218,16 @@ a.button:hover {
 	<form action="/">
 	<hr>
 	<label id="icon" for="name"><i class="icon-user "></i></label>
-	<input type="text" name="name" id="name" placeholder="First-name" required/></br>
+	<input type="text" name="name" id="name" placeholder="Nom" required/></br>
 	<label id="icon" for="name"><i class="icon-user"></i></label>
-	<input type="text" name="name" id="name" placeholder="Last-name" required/>
+	<input type="text" name="name" id="name" placeholder="Prénom" required/>
 	</hr>
 	<hr>
 	<div class="gender">
 	<input type="radio" value="None" id="male" name="gender" checked/>
-	<label for="male" class="radio" chec>Male</label>
+	<label for="male" class="radio" chec>Homme</label>
 	<input type="radio" value="None" id="female" name="gender" />
-	<label for="female" class="radio">Female</label>
+	<label for="female" class="radio">Femme</label>
 	</div>
 	</hr>
 	<hr>
