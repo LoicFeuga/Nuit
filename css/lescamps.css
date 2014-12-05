@@ -1,0 +1,27 @@
+#oeuf {
+	position: absolute;
+	display: none;
+	top:0px;
+	height: 120px ;
+	width: 120px ;
+	left: 0px ;
+	background:url(../images/oeuf.png) no-repeat;
+}
+#oeuf2 {
+	position: absolute;
+	display: none;
+	top:600px;
+	height: 120px ;
+	width: 120px ;
+	left: 1200px ;
+	background:url(../images/oeuf2.png) no-repeat;
+}
+#couple {
+	position: absolute;
+	display: none;
+	top:0px;
+	height: 600px ;
+	width: 600px ;
+	left: 250px ;
+	background:url(../images/couple.png) no-repeat;
+}
