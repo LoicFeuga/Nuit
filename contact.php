@@ -192,7 +192,7 @@ a.button:hover {
 
 
       
-      <p>contact</p>
+      <p>Prendre contact</p>
       
 
       
