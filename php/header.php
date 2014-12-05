@@ -39,7 +39,7 @@ http://www.tooplate.com/view/2033-business
                 <li><a href="mission.php" class="">Mission</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
-                <li><a href="contact.php">Connexion</a></li>
+                <li><a href="connexion.php">Connexion</a></li>
             </ul>     
         
         </div> <!-- end of tooplate_menu -->
