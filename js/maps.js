@@ -50,7 +50,7 @@ function initialize(){
          success: function(r) {
            var result = eval(r);
            
-           alert(result[3]);
+           
 
              var marker = new google.maps.Marker({
       position: new google.maps.LatLng(result[1],result[3]),
