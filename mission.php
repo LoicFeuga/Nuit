@@ -1,6 +1,4 @@
 <?php include "php/header.php"; ?>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-<script src="js/maps.js"></script>
 <div id="tooplate_middle_wrapper1">
   <div id="tooplate_middle_wrapper2">
     <div id="tooplate_middle">
@@ -28,4 +26,7 @@
     </div>
     
 </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script src="js/maps.js"></script>
 <?php include "php/footer.php"; ?>

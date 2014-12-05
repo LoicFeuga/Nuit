@@ -14,79 +14,97 @@ var fichier_kml;
 var compteur = 0;
 //Tableau de tous les markers
 var markers = new Array();
+var initialLocation;
+
+var browserSupportFlag =  new Boolean();
 
 
 function initialize(){
 
-	navigator.geolocation.getCurrentPosition(appendPosition, displayError, {enableHighAccuracy : true});
+    
+    // Options relatives à la carte
+    optionsGmaps = {
+        center: nice,
+        //mapTypeId: ROADMAP,SATELLITE,HYBRID ou TERRAIN
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        //Zoom : 0 = terre entière, 25 = au niveau de la rue
+        zoom: 15
+    };
+     map = new google.maps.Map(document.getElementById("map-canvas"), optionsGmaps);
+// Try W3C Geolocation (Preferred)
+  if(navigator.geolocation) {
+    browserSupportFlag = true;
+    navigator.geolocation.getCurrentPosition(function(position) {
+      initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      map.setCenter(initialLocation);
+       var marker = new google.maps.Marker({
+      position: initialLocation,
+      map: map,
+      title: 'Hello World!'
+  });
+    }, function() {
+      handleNoGeolocation(browserSupportFlag);
+    });
+  }
+  // Browser doesn't support Geolocation
+  else {
+    browserSupportFlag = false;
+    handleNoGeolocation(browserSupportFlag);
+  }
 
-	// Options relatives à la carte
-	optionsGmaps = {
-		center: nice,
-		//mapTypeId: ROADMAP,SATELLITE,HYBRID ou TERRAIN
-		mapTypeId: google.maps.MapTypeId.SATELLITE,
-		//Zoom : 0 = terre entière, 25 = au niveau de la rue
-		zoom: 15
-	};
-
-	//On instancie la balise map-canvas en tant que google maps
-	map = new google.maps.Map(document.getElementById("map-canvas"), optionsGmaps);
-
-	//Instanciation du markeur de l'utilisateur
-	//qui aura une zone + un rond bleu
-	//
-	GeoMarker = new GeolocationMarker();
-
-	GeoMarker.setCircleOptions({
-		fillColor: '#808080'
-	});
-
-
-
-	GeoMarker.setMap(map);
+  function handleNoGeolocation(errorFlag) {
+    if (errorFlag == true) {
+      alert("Geolocation service failed.");
+      initialLocation = newyork;
+    } else {
+      alert("Your browser doesn't support geolocation. We've placed you in Siberia.");
+      initialLocation = siberia;
+    }
+    map.setCenter(initialLocation);
+  }
 
 
 
 }
  function displayError(error) {
-	    var info = "Erreur lors de la géolocalisation : ";
-	    switch(error.code) {
-	    case error.TIMEOUT:
-	    	info += "Timeout !";
-	    break;
-	    case error.PERMISSION_DENIED:
-	    	info += "Vous n’avez pas donné la permission";
-	    break;
-	    
-	    case error.POSITION_UNAVAILABLE:
-	    	info += "La position n’a pu être déterminée";
-	    break;
-	    
-	    case error.UNKNOWN_ERROR:
-	    	info += "Erreur inconnue";
-	    break;
-	    }
-	    alert(info);
+        var info = "Erreur lors de la géolocalisation : ";
+        switch(error.code) {
+        case error.TIMEOUT:
+            info += "Timeout !";
+        break;
+        case error.PERMISSION_DENIED:
+            info += "Vous n’avez pas donné la permission";
+        break;
+        
+        case error.POSITION_UNAVAILABLE:
+            info += "La position n’a pu être déterminée";
+        break;
+        
+        case error.UNKNOWN_ERROR:
+            info += "Erreur inconnue";
+        break;
+        }
+        alert(info);
     }
 
 
 function appendPosition(position) {
         // Calculate distance from last position if available
       
-      	pos_utilisateur = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          pos_utilisateur = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
 
-      	map.setCenter(pos_utilisateur);
+          map.setCenter(pos_utilisateur);
 
-	 var marker = new google.maps.Marker({
+     var marker = new google.maps.Marker({
       position: pos_utilisateur,
       map: map,
       title: 'Hello World!'
- 	 });
+      });
 
     }
 
-$(document).ready(function(){
+
+
 initialize();
-alert('ok');
-});
+
