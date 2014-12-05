@@ -22,16 +22,16 @@ switch($_['action']){
 
     case 'connexion':
         $id = $_['id'];
-        $query_get_prenom = $db->query("SELECT *
+        $getPersonne = $db->query("SELECT *
                                            FROM personne
                                            WHERE id_personne = '".$id."' ")
-         or die ("Erreur SQL !".$query_get_prenom."<br />".mysql_error());
+         or die ("Erreur SQL !".$getPersonne."<br />".mysql_error());
 
 
-         $query_get_prenom = $query_get_prenom->fetch();
+         $getPersonne = $getPersonne->fetch();
 
          //Si la query n'est pas vide 
-         if(!empty($query_get_prenom)){
+         if(!empty($getPersonne)){
 
              $result[1] = 1;
          }else{
@@ -40,7 +40,25 @@ switch($_['action']){
 
          $result[2]=0;
          session_start();
-         $_SESSION['id'] = $result[$query_get_prenom['id_personne']];
+         $_SESSION['id'] = $result[$getPersonne['id_personne']];
+
+    break;
+
+    case 'getMissions':
+
+        $getMissions = $db->query("SELECT *
+                                           FROM mission ")
+         or die ("Erreur SQL !".$getMissions."<br />".mysql_error());
+
+          $getMissions = $getMissions->fetch();
+
+         //Si la query n'est pas vide 
+         if(!empty($getMissions)){
+             $result[1] = $getMissions['latitude'];
+             $result[2] = $getMissions['longitude'];
+         }else{
+             $result[1] = "vide";
+         }
 
     break;
 

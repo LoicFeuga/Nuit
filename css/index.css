@@ -78,3 +78,20 @@ div#mariopingouin3 {
 
 
 
+.container_mission{
+	width:900px;
+	
+	border-radius: 5px;
+}
+
+#map-canvas {
+	height: 500px;
+
+}
+.cleaner10{
+	margin-top: 200px;
+}
+
+
+
+
