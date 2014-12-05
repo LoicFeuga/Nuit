@@ -42,6 +42,25 @@ function initialize(){
       map: map,
       title: 'Hello World!'
   });
+
+       $.ajax({
+         type: "POST",
+         url: "./php/action.php?action=get_missions",
+
+         success: function(r) {
+           var result = eval(r);
+           
+           alert(result[3]);
+
+             var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(result[1],result[3]),
+      map: map,
+      title: result[4]
+  });
+               
+         }
+       });    
+       
     }, function() {
       handleNoGeolocation(browserSupportFlag);
     });

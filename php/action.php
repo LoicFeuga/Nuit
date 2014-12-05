@@ -22,16 +22,16 @@ switch($_['action']){
 
     case 'connexion':
         $id = $_['id'];
-        $getPersonne = $db->query("SELECT *
+        $query_get_prenom = $db->query("SELECT *
                                            FROM personne
                                            WHERE id_personne = '".$id."' ")
-         or die ("Erreur SQL !".$getPersonne."<br />".mysql_error());
+         or die ("Erreur SQL !".$query_get_prenom."<br />".mysql_error());
 
 
-         $getPersonne = $getPersonne->fetch();
+         $query_get_prenom = $query_get_prenom->fetch();
 
          //Si la query n'est pas vide 
-         if(!empty($getPersonne)){
+         if(!empty($query_get_prenom)){
 
              $result[1] = 1;
          }else{
@@ -40,26 +40,30 @@ switch($_['action']){
 
          $result[2]=0;
          session_start();
-         $_SESSION['id'] = $result[$getPersonne['id_personne']];
+         $_SESSION['id'] = $result[$query_get_prenom['id_personne']];
 
     break;
+    
+    case 'get_missions':
+        $get_missions = $db->query("SELECT *
+                                           FROM mission
+                                           WHERE 1 ")
+         or die ("Erreur SQL !".$get_missions."<br />".mysql_error());
 
-    case 'getMissions':
 
-        $getMissions = $db->query("SELECT *
-                                           FROM mission ")
-         or die ("Erreur SQL !".$getMissions."<br />".mysql_error());
-
-          $getMissions = $getMissions->fetch();
+         $get_missions = $get_missions->fetch();
 
          //Si la query n'est pas vide 
-         if(!empty($getMissions)){
-             $result[1] = $getMissions['latitude'];
-             $result[2] = $getMissions['longitude'];
+         if(!empty($get_missions)){
+
+             $result[1] = $get_missions['latitude'];
+             $result[3] = $get_missions['longitude'];
+             $result[4] = $get_missions['description'];
          }else{
              $result[1] = "vide";
          }
 
+         $result[2]=0;
     break;
 
 
