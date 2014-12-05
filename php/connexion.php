@@ -13,7 +13,7 @@
 
       // Connection au serveur
       try {
-          $dns = 'mysql:host=localhost;dbname=test';
+          $dns = 'mysql:host=localhost;dbname=ninja';
           $user = 'root';
           $password = '';
           $db = new PDO( $dns, $user, $password );

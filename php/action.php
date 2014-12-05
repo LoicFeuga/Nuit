@@ -20,26 +20,30 @@ $result;
 
 switch($_['action']){
 
-     case 'recuperer_prenom':
-         //variable id récupérée du JavaScript
-         $id = $_['id'];
-         $query_get_prenom = $db->query("SELECT *
-                                           FROM utilisateur
-                                           WHERE id = '".$id."' ")
+    case 'connexion':
+        $id = $_['id'];
+        $query_get_prenom = $db->query("SELECT *
+                                           FROM personne
+                                           WHERE id_personne = '".$id."' ")
          or die ("Erreur SQL !".$query_get_prenom."<br />".mysql_error());
+
 
          $query_get_prenom = $query_get_prenom->fetch();
 
          //Si la query n'est pas vide 
          if(!empty($query_get_prenom)){
-             $result[0] = $query_get_prenom['name'];
+
              $result[1] = 1;
          }else{
              $result[1] = "vide";
          }
 
+         $result[2]=0;
+         session_start();
+         $_SESSION['id'] = $result[$query_get_prenom['id_personne']];
 
-     break;
+    break;
+
 
      default:
          $result ="Aucune action définie";
