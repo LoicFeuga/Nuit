@@ -19,9 +19,10 @@
 <div id="tooplate_main">
     
     <div id="tooplate_content">
+    
 
-            
-      C'est la famille
+      <button>Rechecher famille</button>
+      <button>Enregistrer famille</button>
             
             
     </div>

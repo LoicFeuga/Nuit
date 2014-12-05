@@ -29,4 +29,13 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script src="js/maps.js"></script>
-<?php include "php/footer.php"; ?>
+<!-- Inclusion de jquery -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- Incusion de jquery en local 
+    <script type="text/javascript" src =""></script>-->
+
+
+</body>
+
+</html>

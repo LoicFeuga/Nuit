@@ -7,7 +7,9 @@
 
 
       
-      <p>Ce site</p>
+      <p>Ce projet à pour une vocation humanitaire</p>
+      <p>Il peut être utilisé pour gérer les déplacements de personnes</p>
+      <p>Ou pour gérer toutes formes de missions impliquant une aide d'intervenant à des personnes</p>  
       
 
       
@@ -19,8 +21,7 @@
     
     <div id="tooplate_content">
 
-            
-      C'est l'accueil
+
             
             
     </div>

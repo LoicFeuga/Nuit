@@ -19,52 +19,58 @@ var initialLocation;
 var browserSupportFlag =  new Boolean();
 
 
+
+var k = [38, 38], 
+n = 0;  
+
+
+
 function initialize(){
 
-    
+
     // Options relatives à la carte
     optionsGmaps = {
-        center: nice,
+      center: nice,
         //mapTypeId: ROADMAP,SATELLITE,HYBRID ou TERRAIN
         mapTypeId: google.maps.MapTypeId.SATELLITE,
         //Zoom : 0 = terre entière, 25 = au niveau de la rue
         zoom: 15
-    };
-     map = new google.maps.Map(document.getElementById("map-canvas"), optionsGmaps);
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"), optionsGmaps);
 // Try W3C Geolocation (Preferred)
-  if(navigator.geolocation) {
-    browserSupportFlag = true;
-    navigator.geolocation.getCurrentPosition(function(position) {
-      initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-      map.setCenter(initialLocation);
-       var marker = new google.maps.Marker({
+if(navigator.geolocation) {
+  browserSupportFlag = true;
+  navigator.geolocation.getCurrentPosition(function(position) {
+    initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+    map.setCenter(initialLocation);
+    var marker = new google.maps.Marker({
       position: initialLocation,
       map: map,
-      title: 'Hello World!'
-  });
-
-       $.ajax({
-         type: "POST",
-         url: "./php/action.php?action=get_missions",
-
-         success: function(r) {
-           var result = eval(r);
-           
-           
-
-             var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(result[1],result[3]),
-      map: map,
-      title: result[4]
-  });
-               
-         }
-       });    
-       
-    }, function() {
-      handleNoGeolocation(browserSupportFlag);
+      title: 'Vous êtes ici ! '
     });
-  }
+
+    $.ajax({
+     type: "POST",
+     url: "./php/action.php?action=get_missions",
+
+     success: function(r) {
+       var result = eval(r);
+
+
+
+       var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(result[1],result[3]),
+        map: map,
+        title: result[4]
+      });
+
+     }
+   });    
+
+  }, function() {
+    handleNoGeolocation(browserSupportFlag);
+  });
+}
   // Browser doesn't support Geolocation
   else {
     browserSupportFlag = false;
@@ -85,45 +91,46 @@ function initialize(){
 
 
 }
- function displayError(error) {
-        var info = "Erreur lors de la géolocalisation : ";
-        switch(error.code) {
-        case error.TIMEOUT:
-            info += "Timeout !";
-        break;
-        case error.PERMISSION_DENIED:
-            info += "Vous n’avez pas donné la permission";
-        break;
-        
-        case error.POSITION_UNAVAILABLE:
-            info += "La position n’a pu être déterminée";
-        break;
-        
-        case error.UNKNOWN_ERROR:
-            info += "Erreur inconnue";
-        break;
-        }
-        alert(info);
-    }
+function displayError(error) {
+  var info = "Erreur lors de la géolocalisation : ";
+  switch(error.code) {
+    case error.TIMEOUT:
+    info += "Timeout !";
+    break;
+    case error.PERMISSION_DENIED:
+    info += "Vous n’avez pas donné la permission";
+    break;
+
+    case error.POSITION_UNAVAILABLE:
+    info += "La position n’a pu être déterminée";
+    break;
+
+    case error.UNKNOWN_ERROR:
+    info += "Erreur inconnue";
+    break;
+  }
+  alert(info);
+}
 
 
 function appendPosition(position) {
         // Calculate distance from last position if available
-      
-          pos_utilisateur = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+        pos_utilisateur = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
 
-          map.setCenter(pos_utilisateur);
+        map.setCenter(pos_utilisateur);
 
-     var marker = new google.maps.Marker({
-      position: pos_utilisateur,
-      map: map,
-      title: 'Hello World!'
-      });
+        var marker = new google.maps.Marker({
+          position: pos_utilisateur,
+          map: map,
+          title: 'Hello World!'
+        });
 
-    }
+      }
 
 
 
-initialize();
+      initialize();
+
 
