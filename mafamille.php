@@ -1,6 +1,6 @@
 <?php include "php/header.php"; ?>
+<link rel="stylesheet" type="text/css" href="./css/mafamille.css">
 
-  
 <div id="tooplate_middle_wrapper1">
   <div id="tooplate_middle_wrapper2">
     <div id="tooplate_middle">
@@ -26,4 +26,25 @@
     </div>
     
 </div>
-<?php include "php/footer.php"; ?>
+<div id="etoile"></div>
+<div id="etoile2"></div>
+<div id="etoile3"></div>
+
+	<!-- Inclusion de jquery -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- Incusion de jquery en local 
+    <script type="text/javascript" src =""></script>-->
+
+    <!-- Inclusion des pages JavaScript -->
+    <script src="js/index.js"></script>
+
+    <!-- Inclusion des pages jQuery-->
+    <script src="js/jquery/mafamille_jquery.js"></script>
+    
+    <!-- Inclusion de BootStrap js -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

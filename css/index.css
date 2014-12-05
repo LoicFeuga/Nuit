@@ -12,8 +12,60 @@ body
 	margin:0px auto auto auto;*/
 }
 
-
-
+div#mario {
+	position: absolute;
+	display : none;
+	top:900px;
+	height: 256px ;
+	width: 256px ;
+	left: 300px ;
+	background:url(../images/mario.png) no-repeat;
+}
+div#mario2 {
+	position: absolute;
+	display : none;
+	top:900px;
+	height:256px ;
+	width: 256px;
+	left:600px ;
+	background:url(../images/mario2.png) no-repeat;
+}
+div#mario3 {
+	position: absolute;
+	display : none;
+	top:900px;
+	height:256px ;
+	width: 256px ;
+	left:900px ;
+	background:url(../images/mario3.png) no-repeat;
+}
+div#mariopingouin {
+	position: absolute;
+	display : none;
+	top:300px;
+	height: 400px ;
+	width:400px ;
+	left:300px ;
+	background:url(../images/mariopingouin.png) no-repeat;
+}
+div#mariopingouin2 {
+	position: absolute;
+	display : none;
+	top:300px;
+	height: 400px;
+	width: 400px;
+	left:600px ;
+	background:url(../images/mariopingouin2.png) no-repeat;
+}
+div#mariopingouin3 {
+	position: absolute;
+	display : none;
+	top:300px;
+	height: 400px;
+	width: 400px;
+	left:900px ;
+	background:url(../images/mariopingouin3.png) no-repeat;
+}
 .center{
 
 	margin-left:auto;

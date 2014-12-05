@@ -1,0 +1,29 @@
+div#etoile {
+	position: absolute;
+	display: none;
+	top:0px;
+	height: 96px ;
+	width: 96px ;
+	left: 0px ;
+	background:url(../images/etoile.png) no-repeat;
+}
+
+div#etoile2 {
+	position: absolute;
+	display: none;
+	top:80px;
+	height: 96px ;
+	width: 96px ;
+	left: 300px ;
+	background:url(../images/etoile2.png) no-repeat;
+}
+
+div#etoile3 {
+	position: absolute;
+	display: none;
+	top:0px;
+	height: 96px ;
+	width: 96px ;
+	left: 600px ;
+	background:url(../images/etoile.png) no-repeat;
+}
